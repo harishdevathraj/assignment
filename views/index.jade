@@ -1,0 +1,65 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to our test
+
+    // Wrapper
+    #wrapper
+
+        // USER INFO
+        #userInfo
+            h2 Product info
+            p
+                strong Product Name:
+                |  <span id='product1'></span>
+                br
+                strong Review:
+                |  <span id='review1'></span>
+                br
+                strong Rating:
+                |  <span id='rating1'></span>
+                br
+                strong Price:
+                |  <span id='price1'></span>
+        // /USER INFO
+    
+        // USER LIST
+        h2 Product List
+        #userList
+            table
+                thead
+                    th Product Name
+                    th Image
+                    th Description
+                    th Specifications
+                    th Ratings
+                    th Reviews
+                    th Price
+                    th Delete product?
+                tbody
+        // /USER LIST
+
+        // ADD USER
+        h2 Add Product details
+        #addproduct
+            fieldset
+                input#inputproductName(type='text', placeholder='Product Name')
+                input#inputimage(type='text', placeholder='image')
+                br
+                input#inputDescription(type='text', placeholder='Description')
+                input#inputspecifications(type='text', placeholder='specifications')
+                br
+                input#inputrating(type='text', placeholder='rating')
+                input#inputreview(type='text', placeholder='reviews')
+                br
+                input#inputprice(type='text',placeholder='price')
+                br
+                button#btnAddproduct Add Product
+                
+                 <form action "/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="myimage" ></input>
+        <input type="submit" name="submit" value="submit"></input>
+        // /ADD USER
+
+    // /WRAPPER
